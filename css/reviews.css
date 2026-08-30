@@ -1,0 +1,24 @@
+.reviews {
+}
+
+.reviews-title {
+}
+
+.reviews-list {
+}
+.reviews-item {
+  background: #fff;
+}
+.reviews-img {
+}
+.reviews-name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  text-align: center;
+}
+.reviews-text {
+  font-weight: 400;
+  text-align: center;
+  color: rgba(17, 17, 17, 0.7);
+}
