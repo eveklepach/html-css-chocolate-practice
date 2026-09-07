@@ -1,15 +1,40 @@
 .ingredients {
+  padding: 120px 0 60px;
 }
 .ingredients-title {
 }
 .ingredients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
 }
 .ingredients-item {
+  width: calc((100% - 32px * 3) / 4);
+  border-radius: 15px;
+  padding: 28px 24px;
 }
 .ingredients-img {
+  margin-bottom: 36px;
 }
 .ingredients-subtitle {
   font-weight: 600;
   text-transform: uppercase;
   font-size: inherit;
+}
+.ingredients-item:nth-child(2n) {
+  background: #fff;
+  border: 1px solid #fd9222;
+  border-radius: 15px;
+}
+.ingredients-item:nth-child(4n + 1) {
+  border-radius: 15px;
+  padding: 28px 24px;
+  background: #fd9222;
+  color: #fff;
+}
+.ingredients-item:nth-child(4n + 3) {
+  background: #1e1823;
+  border-radius: 15px;
+  padding: 28px 24px;
+  color: #fff;
 }
