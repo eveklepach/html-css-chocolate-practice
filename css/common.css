@@ -45,6 +45,10 @@ button {
   cursor: pointer;
 }
 
+p {
+  margin: 0;
+}
+
 address {
   font-style: normal;
 }
@@ -73,8 +77,8 @@ address {
   padding: 0 16px;
   margin: 0 auto;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 /* Base styles */
 .logo {
@@ -113,16 +117,28 @@ address {
   padding: 8px;
   width: 40px;
   height: 40px;
+
+  transition: 300ms ease-out;
+  transition-property: border-color;
+}
+.socials-light .socials-icon {
+  color: #fff;
 }
 .socials-light .socials-link {
-  background-color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .socials-link:hover,
 .socials-link:focus {
   border: 1px solid rgba(253, 146, 34, 0.1);
 }
 .socials-icon {
+  color: #111;
+  transition: 300ms ease-out;
+  transition-property: color;
+}
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  color: #fd9222;
 }
 /* Buttons */
 .btn {
@@ -132,6 +148,8 @@ address {
   background-color: transparent;
   border: 1px solid transparent;
   font-weight: 600;
+  transition: 300ms ease-out;
+  transition-property: color, border-color, background-color;
 }
 .btn-filled {
   background-color: #fd9222;

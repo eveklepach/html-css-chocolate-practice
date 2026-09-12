@@ -31,3 +31,19 @@
   border-radius: 16px;
   background-color: #fff;
 }
+.made-item {
+  display: flex;
+  gap: 8px;
+}
+
+.made-item::before {
+  content: '';
+  flex-shrink: 0;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+  border: 1px solid #eceded;
+  background-color: #4c4c4c;
+  border-radius: 50%;
+}

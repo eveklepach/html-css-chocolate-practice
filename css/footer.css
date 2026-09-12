@@ -29,6 +29,8 @@
 .contacts-link {
   font-weight: 400;
   color: #fff;
+  transition: 300ms ease-out;
+  transition-property: color;
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -60,6 +62,8 @@
   color: #fff;
   padding: 11px 0;
   display: block;
+  transition: 300ms ease-out;
+  transition-property: color;
 }
 
 .footer-menu-link:hover,

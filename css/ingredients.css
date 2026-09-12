@@ -12,6 +12,7 @@
   width: calc((100% - 32px * 3) / 4);
   border-radius: 15px;
   padding: 28px 24px;
+  position: relative;
 }
 .ingredients-img {
   margin-bottom: 36px;
@@ -37,4 +38,24 @@
   border-radius: 15px;
   padding: 28px 24px;
   color: #fff;
+}
+.ingredients-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.ingredients-item:nth-child(2n) .ingredients-icon {
+  color: #fd9222;
+}
+
+.ingredients-item:nth-child(2n + 1) .ingredients-icon {
+  color: #fafafa;
 }
