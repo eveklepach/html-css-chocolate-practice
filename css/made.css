@@ -1,8 +1,11 @@
-.made {
-}
-.made-title {
-}
 .made-img {
+  height: 400px;
+  object-fit: cover;
+}
+@media only screen and (min-width: 768px) {
+  .made-img {
+    width: 600px;
+  }
 }
 .made-subtitle {
   font-weight: 600;
@@ -10,26 +13,50 @@
   line-height: 1.33333;
   color: #111;
   max-width: 350px;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .made-subtitle {
+    margin-bottom: 28px;
+  }
 }
 .made-list {
 }
 .made-item:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+}
+
+@media only screen and (min-width: 1168px) {
+  .made-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
 .made-wrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
+}
+@media only screen and (min-width: 1168px) {
+  .made-wrapper {
+    flex-direction: row;
+  }
 }
 .made-rightside {
   border-radius: 15px;
   padding: 32px;
-  width: 516px;
+  max-width: 600px;
+}
+@media only screen and (min-width: 1168px) {
+  .made-rightside {
+    width: 516px;
+  }
 }
 .made-leftside {
   overflow: hidden;
   border-radius: 16px;
   background-color: #fff;
+  max-width: 600px;
 }
 .made-item {
   display: flex;

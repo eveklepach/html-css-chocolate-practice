@@ -7,6 +7,7 @@
   height: 100%;
 
   background-color: rgb(17, 17, 17, 0.4);
+  overflow-y: auto;
 
   opacity: 0;
   visibility: hidden;
@@ -30,16 +31,20 @@
   transform: translateX(-50%) translateY(-70%);
 
   border-radius: 15px;
-  padding: 40px;
-  min-height: 800px;
-  max-width: 518px;
-  width: 100%;
+  padding: 32px 24px;
+  max-width: 312px;
+  width: 84%;
   background-color: #fafafa;
 
   transition: 300ms ease-out 0ms;
   transition-property: transform, opacity;
 }
-
+@media only screen and (min-width: 768px) {
+  .modal {
+    max-width: 518px;
+    padding: 40px;
+  }
+}
 .backdrop.is-open .modal {
   transform: translateX(-50%) translateY(-50%);
   opacity: 1;
@@ -49,52 +54,78 @@
 
 .modal-btn {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 10px;
+  right: 10px;
   padding: 0;
   background-color: transparent;
   border: none;
 }
-
+@media only screen and (min-width: 768px) {
+  .modal-btn {
+    top: 24px;
+    right: 24px;
+  }
+}
 .modal-btn-icon {
   color: #111111;
   transition: 300ms ease-out;
   transition-property: color;
+}
+@media only screen and (min-width: 768px) {
+  .modal-btn-icon {
+    width: 28px;
+    height: 28px;
+  }
 }
 .modal-btn:focus > .modal-btn-icon,
 .modal-btn:hover > .modal-btn-icon {
   color: #fd9222;
 }
 .modal-caption {
-  width: 300px;
-  margin-bottom: 40px;
+  font-size: 20px;
+  line-height: 1.2;
+  max-width: 300px;
+  margin-bottom: 24px;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 1.7;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  .modal-caption {
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 1.7;
+  }
 }
 .accent {
 }
 
 /* Form */
-.modal-form {
-}
 .modal-form-field {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .modal-form-field {
+    margin-bottom: 18px;
+  }
 }
 .modal-form-label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: rgba(17, 17, 17, 0.7);
+}
+@media only screen and (min-width: 768px) {
+  .modal-form-label {
+    margin-bottom: 8px;
+  }
 }
 .modal-form-wrapper {
   position: relative;
 }
 .modal-form-input {
   width: 100%;
-  height: 68px;
-  padding: 22px 62px;
+  height: 46px;
+  padding: 10px 44px;
 
   font-size: 18px;
   line-height: 1.33333;
@@ -105,6 +136,12 @@
 
   transition: 300ms ease-out;
   transition-property: border-color;
+}
+@media only screen and (min-width: 768px) {
+  .modal-form-input {
+    padding: 22px 62px;
+    height: 68px;
+  }
 }
 .modal-form-input:focus {
   border-color: #fd9222;
@@ -122,20 +159,27 @@
 }
 
 .modal-form-comment {
-  padding: 22px 24px;
+  padding: 14px 18px;
   width: 100%;
-  height: 138px;
+  height: 90px;
 
-  font-weight: 18px;
   line-height: 1.33;
 
   outline: transparent;
   border: 1px solid rgba(17, 17, 17, 0.1);
-  border-radius: 12px;
+  border-radius: 8px;
   resize: none;
 
   transition: 300ms ease-out;
   transition-property: border-color;
+}
+@media only screen and (min-width: 768px) {
+  .modal-form-comment {
+    padding: 22px 24px;
+    height: 138px;
+    border-radius: 12px;
+    font-size: 18px;
+  }
 }
 .modal-form-comment::placeholder {
   color: rgba(17, 17, 17, 0.4);
@@ -145,12 +189,32 @@
 }
 
 .modal-form-agreement {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal-form-agreement {
+    margin-bottom: 40px;
+  }
 }
 .modal-form-policy {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   color: rgba(17, 17, 17, 0.7);
+
+  font-size: 12px;
+  line-height: 1.16667;
+}
+@media only screen and (min-width: 768px) {
+  .modal-form-policy {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28571;
+  }
 }
 .modal-form-checkbox {
+  flex-shrink: 0;
   width: 20px;
   height: 20px;
   display: inline-flex;
@@ -158,7 +222,6 @@
   align-items: center;
   border-radius: 6px;
 
-  margin-right: 12px;
   border: 1px solid rgba(17, 17, 17, 0.14);
   cursor: pointer;
   transition: 300ms ease-out;
@@ -190,6 +253,7 @@
 .modal-form-link {
   color: #fd9222;
 }
+
 /* Form Validation */
 .modal-form-input:user-invalid,
 .modal-form-comment:user-invalid {

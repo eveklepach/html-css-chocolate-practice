@@ -17,6 +17,8 @@ h6 {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 ol,
 ul {
@@ -54,45 +56,104 @@ address {
 }
 
 .section {
-  padding: 60px 0px;
+  padding: 40px 0;
+}
+@media only screen and (min-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
 }
 
+@media only screen and (min-width: 1168px) {
+  .section {
+    padding: 60px 0;
+  }
+}
 .section-title {
-  max-width: 412px;
-  margin-bottom: 50px;
+  max-width: 284px;
+  margin: 0 auto 32px;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 1.16667;
+
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: -0.03em;
   text-align: center;
   text-transform: uppercase;
-  margin: 0 auto 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-title {
+    max-width: 412px;
+    margin: 0 auto 50px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .section-title {
+    max-width: 412px;
+    margin: 0 auto 50px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
 }
 .accent {
   color: #fd9222;
 }
-
-.container {
-  max-width: 1168px;
-  padding: 0 16px;
-  margin: 0 auto;
-
-  /* outline: 2px solid red;
-  outline-offset: -2px; */
+/* Helper class */
+.hide {
+  display: none !important;
 }
+.container {
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0px 20px;
+
+  /* max-width: 1168px;
+  padding: 0 16px; */
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0px 32px;
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1168px) {
+  .container {
+    max-width: 1168px;
+    padding: 0px 16px;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .logo {
+    font-size: 18px;
+    line-height: 1.11111;
+    gap: 4px;
+  }
+}
+
 /* Base styles */
 .logo {
   display: inline-flex;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 
   font-weight: 700;
-  font-style: italic;
-  font-size: 18px;
-  line-height: 1.11111;
+  font-size: 14px;
+  line-height: 1.28571;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+  color: #111;
+}
+
+.logo-accent {
+  font-style: italic;
 }
 .logo-icon {
 }
@@ -143,13 +204,18 @@ address {
 /* Buttons */
 .btn {
   border-radius: 100px;
-  padding: 14px 40px;
+  padding: 12px 26px;
 
   background-color: transparent;
   border: 1px solid transparent;
   font-weight: 600;
   transition: 300ms ease-out;
   transition-property: color, border-color, background-color;
+}
+@media only screen and (min-width: 768px) {
+  .btn {
+    padding: 14px 40px;
+  }
 }
 .btn-filled {
   background-color: #fd9222;
